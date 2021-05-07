@@ -1,2 +1,2 @@
 # BarbezDotEu.VideoHost
-Base logic related to video hosting services
+Contains base logic (DTOs, enumerations, equality comparers, ...)  related to video hosting services.
