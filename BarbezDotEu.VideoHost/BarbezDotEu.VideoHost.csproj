@@ -6,8 +6,8 @@
     <Title>BarbezDotEu.VideoHost</Title>
     <Product>BarbezDotEu.VideoHost</Product>
     <PackageId>BarbezDotEu.VideoHost</PackageId>
-    <Copyright>©2023 Hannes Barbez</Copyright>
-    <Version>3.0.0</Version>
+    <Copyright>©2025 Hannes Barbez</Copyright>
+    <Version>3.0.1</Version>
     <Description>This package contains base logic (DTOs, enumerations, equality comparers, ...) that can be used in the context of internet-based video hosting services.</Description>
     <PackageTags>basic;videohosting;barbez</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,4 +20,12 @@
     <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/barbezdoteu.extensions.hosting/3.1.0/icon</PackageIconUrl>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+    <!-- only applies when Configuration == Release: -->
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <!-- Turn off generation of a .pdb and strip debug info entirely -->
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
 </Project>
