@@ -3,8 +3,14 @@
 
 namespace BarbezDotEu.VideoHost.Enums
 {
+    /// <summary>
+    /// Represents supported video hosting platforms.
+    /// </summary>
     public enum VideoHost
     {
+        /// <summary>
+        /// Represents the Vimeo video hosting platform.
+        /// </summary>
         Vimeo
     }
 }
