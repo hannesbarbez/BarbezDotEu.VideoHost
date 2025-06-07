@@ -1,25 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Authors>Hannes Barbez</Authors>
-    <Company>Hannes Barbez</Company>
-    <Title>BarbezDotEu.VideoHost</Title>
-    <Product>BarbezDotEu.VideoHost</Product>
-    <PackageId>BarbezDotEu.VideoHost</PackageId>
-    <Copyright>©2025 Hannes Barbez</Copyright>
-    <Version>3.0.1</Version>
-    <Description>This package contains base logic (DTOs, enumerations, equality comparers, ...) that can be used in the context of internet-based video hosting services.</Description>
-    <PackageTags>basic;videohosting;barbez</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://barbez.eu</PackageProjectUrl>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
-    <RepositoryUrl>https://github.com/hannesbarbez/BarbezDotEu.VideoHost</RepositoryUrl>
-    <RepositoryType>GIT</RepositoryType>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/barbezdoteu.extensions.hosting/3.1.0/icon</PackageIconUrl>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Authors>Hannes Barbez</Authors>
+        <Company>Hannes Barbez</Company>
+        <Title>BarbezDotEu.VideoHost</Title>
+        <Product>BarbezDotEu.VideoHost</Product>
+        <PackageId>BarbezDotEu.VideoHost</PackageId>
+        <Copyright>©2025 Hannes Barbez</Copyright>
+        <Version>3.0.1</Version>
+        <Description>This package contains base logic (DTOs, enumerations, equality comparers, ...) that can be used in the context of internet-based video hosting services.</Description>
+        <PackageTags>basic;videohosting;barbez</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://barbez.eu</PackageProjectUrl>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <RepositoryUrl>https://github.com/hannesbarbez/BarbezDotEu.VideoHost</RepositoryUrl>
+        <RepositoryType>GIT</RepositoryType>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>ICON.png</PackageIcon>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
 
     <!-- only applies when Configuration == Release: -->
     <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -28,4 +30,8 @@
         <DebugSymbols>false</DebugSymbols>
         <Optimize>true</Optimize>
     </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\ICON.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>
